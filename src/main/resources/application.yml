@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: user-migrate
+
+  datasource:
+    url: jdbc:postgresql://${DB_HOST}:${DB_PORT}/${DB_NAME}
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
+    hikari:
+      driver-class-name: org.postgresql.Driver
+
+  liquibase:
+    change-log: classpath:db/changelog/changelog-master.xml
+    database-change-log-table: user_service_changelog
+    database-change-log-lock-table: user_service_changelog_lock
+    enabled: true

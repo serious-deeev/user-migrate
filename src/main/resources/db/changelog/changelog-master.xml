@@ -1,0 +1,16 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <include file="1.0.0/2025-05-05-00-create-user_post_schema-changelog.sql"
+             relativeToChangelogFile="true"/>
+
+    <include file="1.0.0/2025-05-05-01-create-users-table-changelog.sql"
+             relativeToChangelogFile="true"/>
+
+</databaseChangeLog>
