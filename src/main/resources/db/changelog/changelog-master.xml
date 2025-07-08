@@ -10,4 +10,7 @@
     <include file="1.0.0/2025-05-05-01-create-users-table-changelog.sql"
              relativeToChangelogFile="true"/>
 
+    <include file="1.0.0/2025-06-16-00-create-posts-table-changelog.sql"
+             relativeToChangelogFile="true"/>
+
 </databaseChangeLog>
