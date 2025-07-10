@@ -11,6 +11,6 @@ spring:
 
   liquibase:
     change-log: classpath:db/changelog/changelog-master.xml
-    database-change-log-table: user_service_changelog
-    database-change-log-lock-table: user_service_changelog_lock
+    database-change-log-table: user_post_storage_changelog
+    database-change-log-lock-table: user_post_storage_changelog_lock
     enabled: true
