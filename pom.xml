@@ -12,10 +12,10 @@
     </parent>
 
     <groupId>org.serious.dev</groupId>
-    <artifactId>user-migrate</artifactId>
+    <artifactId>user-post-storage-db-service</artifactId>
     <version>1.0.0</version>
-    <name>user-migrate</name>
-    <description>user-migrate</description>
+    <name>user-post-storage-db-service</name>
+    <description>user-post-storage-db-service</description>
 
     <scm>
         <connection/>

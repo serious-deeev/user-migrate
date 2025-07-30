@@ -8,7 +8,7 @@
 1\. [user-post-storage-db-service](https://github.com/serious-deeev/user-post-storage-db-service/tree/develop) – spring-boot микросервис, выполняет миграции БД для микросервисов user-service, post-service и order-service:
 * в качестве СУБД используется PostgreSQL 16.8
 * в качестве либы для миграций используется Liquibase
-* создает единую схему для микросервисов `user_post_storage`
+* создает единую схему БД `user_post_storage` для микросервисов
 
 2\. [user-service](https://github.com/serious-deeev/user-service/tree/develop) – spring-boot микросервис для управления пользователями:
 * предоставляет gRPC-метод GetUser для проверки существования пользователя
@@ -22,7 +22,7 @@
 4\. [order-service](https://github.com/serious-deeev/order-service/tree/develop) – spring-boot микросервис для создания заказов:
 * содержит контроллер для обработки HTTP-запросов на создание заказов
 * предоставляет gRPC-клиенты для взаимодействия с сервисами user-service и post-service
-* отвечает за выполнение распределенных транзакций
+* отвечает за выполнение распределенной транзакции
 * для тестирования используется Testcontainers
 
 ### Локальный запуск компонентов
@@ -39,7 +39,7 @@ docker exec -ti user_post_db /bin/bash
 
 Запуск kafka в режиме kraft (broker + controller):
 ```bash
-docker run -d --rm \
+docker run -d --restart=unless-stopped \
   --name test-user-post-kafka-broker \
   -p 9092:9092 \
   -v test-user-post-kafka-broker-data:/var/lib/kafka/data \
