@@ -1,6 +1,6 @@
 spring:
   application:
-    name: user-migrate
+    name: user-post-storage-db-service
 
   datasource:
     url: jdbc:postgresql://${DB_HOST}:${DB_PORT}/${DB_NAME}
